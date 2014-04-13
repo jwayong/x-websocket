@@ -1,6 +1,6 @@
 {
     "name": "x-websocket",
-    "version": "0.0.0",
+    "version": "0.2.0",
     "description": "WebComponent WebSocket wrapper.",
     "authors": [
         "Elie Rotenberg <elie@rotenberg.io>"
@@ -9,6 +9,7 @@
     "main": "dist/x-websocket.html",
     "keywords": [
         "polymer",
+        "websockets",
         "web-components"
     ],
     "ignore": [
