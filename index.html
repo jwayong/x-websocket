@@ -8,12 +8,25 @@
     <script src="bower_components/platform/platform.js"></script>
 
     <!-- Importing Custom Elements -->
-    <link rel="import" href="src/my-element.html">
+    <link rel="import" href="src/x-websocket.html">
 </head>
 <body>
 
     <!-- Using Custom Elements -->
-    <my-element name="Zeno"></my-element>
+    <x-websocket url="ws://echo.websocket.org"></x-websocket>
+    <script>
+		window.addEventListener('polymer-ready', function(e) {
+			var xws = document.querySelector("x-websocket");
+			console.log("xws:", xws);
+			xws.addEventListener("open", function() {
+				console.log("open");
+				xws.send("Hello world !");
+			});
+			xws.addEventListener("message", function(event) {
+				console.log("message", event.detail.data);
+			});
+		});
+    </script>
 
 </body>
 </html>

@@ -1,12 +1,12 @@
 {
-    "name": "my-element",
+    "name": "x-websocket",
     "version": "0.0.0",
-    "description": "TODO: Write a project description",
+    "description": "WebComponent WebSocket wrapper.",
     "authors": [
-        "TODO: Write your name"
+        "Elie Rotenberg <elie@rotenberg.io>"
     ],
     "license": "MIT",
-    "main": "dist/my-element.html",
+    "main": "dist/x-websocket.html",
     "keywords": [
         "polymer",
         "web-components"

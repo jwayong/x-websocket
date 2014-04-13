@@ -1,17 +1,17 @@
-# &lt;my-element&gt; ![Bower Version](https://badge.fury.io/bo/element-boilerplate.svg)
+# &lt;x-websocket&gt; ![Bower Version](https://badge.fury.io/bo/element-boilerplate.svg)
 
-> TODO: Write a project description
+> A Polymer/WebComponent wrapper of WebSocket client.
 
-## Demo
+<!-- ## Demo
 
-[Check it live!](http://webcomponents.github.io/element-boilerplate)
+[Check it live!](http://webcomponents.github.io/element-boilerplate) -->
 
 ## Usage
 
 1. Install the component using [Bower](http://bower.io/):
 
     ```sh
-    $ bower install my-element --save
+    $ bower install x-websocket --save
     ```
 
 2. Import Web Components' polyfill:
@@ -23,49 +23,23 @@
 3. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/my-element/dist/my-element.html">
+    <link rel="import" href="bower_components/x-websocket/dist/x-websocket.html">
     ```
 
 4. Start using it!
 
     ```html
-    <my-element></my-element>
+    <x-websocket url="ws://echo.websocket.org"></x-websocket>
     ```
 
 ## Options
 
-Attribute  | Options                   | Default             | Description
----        | ---                       | ---                 | ---
-`name`     | *string*                  | `World`             | Lorem ipsum
-
-## Development
-
-In order to run it locally you'll need to fetch some dependencies and a basic server setup.
-
-1. Install [Bower](http://bower.io/) & [Grunt](http://gruntjs.com/):
-
-    ```sh
-    $ [sudo] npm install -g bower grunt-cli
-    ```
-
-2. Install local dependencies:
-
-    ```sh
-    $ bower install && npm install
-    ```
-
-3. To test your project, start the development server and open `http://localhost:8000`.
-
-    ```sh
-    $ grunt
-    ```
-
-4. Once you finish developing it, build the distribution files and publish it on Bower.
-
-    ```sh
-    $ grunt build
-    $ bower register my-element https://github.com/you/my-element
-    ```
+Attribute       | Options                   | Default             | Description
+---             | ---                       | ---                 | ---
+`url`           | *string*                  | `undefined`         | WebSocket server endpoint to connect to. Usually starts with `ws://` or `wss://`.
+`json`          | *bool*                    | `false`             | Automatically JSON-encode sent messages and JSON-decode received messages.
+`jsonSend`      | *bool*                    | `false`             | Automatically JSON-encode sent messages, even if `json` is `false`.
+`jsonReceive`   | *bool*                    | `false`             | Automatically JSON-decode recieved messages, even if `json` is `false`.
 
 ## Contributing
 
@@ -77,7 +51,7 @@ In order to run it locally you'll need to fetch some dependencies and a basic se
 
 ## History
 
-For detailed changelog, check [Releases](https://github.com/webcomponents/element-boilerplate/releases).
+For detailed changelog, check [Releases](https://github.com/elierotenberg/x-websocket/releases).
 
 ## License
 
