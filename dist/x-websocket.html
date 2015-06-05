@@ -22,6 +22,16 @@
 				},
 
 				/**
+				 * Automatically connect when the URL is changed ? Defaults to false.
+				 * @public
+				 * @type {Boolean}
+				 */
+				auto: {
+					type: Boolean,
+					default: false
+				},
+
+				/**
 				 * Should both sent and received data be interpreted as json and encoded/decoded ? Defaults to false.
 				 * @public
 				 * @type {Boolean}
@@ -71,6 +81,15 @@
 				}
 				this._ws.send(data);
 			},
+
+			/**
+			 * Open the connection if previously closed, or if {{auto}} is false.
+			 * @public
+			 */
+			open: function() {
+				this._connect();
+			},
+
 			/**
 			 * Close the current connection. Optionally provide with a reason.
 			 * @public
@@ -82,6 +101,7 @@
 					this._ws = null;
 				}
 			},
+
 			/**
 			 * Underlying connection readyState getter.
 			 * @see {@link http://www.w3.org/TR/websockets/#dom-websocket-readystate}
@@ -102,7 +122,9 @@
 			 * @private
 			 */
 			urlChanged: function() {
-				this._connect();
+				if (this.auto) {
+					this.open();
+				}
 			},
 
 			/**
