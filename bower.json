@@ -1,9 +1,10 @@
 {
     "name": "x-websocket",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "WebComponent WebSocket wrapper.",
     "authors": [
-        "Elie Rotenberg <elie@rotenberg.io>"
+        "Elie Rotenberg <elie@rotenberg.io>",
+        "Jason White <jwhite@navinet.net>"
     ],
     "license": "MIT",
     "main": "dist/x-websocket.html",
@@ -18,7 +19,6 @@
         "bower_components"
     ],
     "dependencies": {
-        "platform": "Polymer/platform#~0.2.0",
-        "polymer": "Polymer/polymer#~0.2.0"
+        "polymer": "Polymer/polymer#1.0.0"
     }
 }
